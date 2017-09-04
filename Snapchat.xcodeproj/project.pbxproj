@@ -383,6 +383,7 @@
 				CE25E6E01F57EB3F0029CE59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
