@@ -61,8 +61,33 @@ class CadastroViewController: UIViewController {
                             if error == nil {
                                 print("Sucesso ao cadastrar usuário.")
                             }else {
-                                print("Erro ao cadastrar usuário")
-                            }
+                                
+                                let erroR = error! as NSError
+                                if let codigoErro = erroR.userInfo["error_name"] {
+                                    
+                                    let erroTexto = codigoErro as! String
+                                    var mensagemErro = ""
+                                    switch erroTexto {
+                                        case "ERROR_INVALID_EMAIL" :
+                                            mensagemErro = "E-mail inválidom digite um e-mail váido!"
+                                            break
+                                        
+                                        case "ERROR_WEAK_PASSWORD" :
+                                            mensagemErro = "Senha precisa ter no mínimo 6 caracteres, com letras e números."
+                                            break
+                                        
+                                        case "ERROR_EMAIL_ALREADY_IN_USE" :
+                                            mensagemErro = "Esse e-mail já está sendo utilizado, crie sua conta com outro e-mail."
+                                            break
+                                        
+                                        default :
+                                            mensagemErro = "Dados digitados estão incorreto."
+                                    }
+                                    self.exibirMensagem(titulo: "Dados Inválidos", mensagem: mensagemErro)
+                                    
+                                }
+                                
+                            }/*Fim validação erro Firebase*/
                         })
                         
                     }else{
