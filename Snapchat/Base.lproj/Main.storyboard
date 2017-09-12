@@ -109,7 +109,7 @@
                                 <rect key="frame" x="20" y="100.33333333333334" width="374" height="30.000000000000028"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pk-QM-PgP">
                                 <rect key="frame" x="20" y="146.33333333333334" width="48" height="21"/>
@@ -121,7 +121,7 @@
                                 <rect key="frame" x="20" y="175.33333333333334" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q25-ce-rfV">
                                 <rect key="frame" x="147" y="221.33333333333331" width="120" height="39.999999999999943"/>
@@ -178,7 +178,7 @@
                                 <rect key="frame" x="20" y="100.33333333333334" width="374" height="30.000000000000028"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bi7-Xi-BX9">
                                 <rect key="frame" x="20" y="146.33333333333334" width="48" height="20.333333333333314"/>
@@ -190,7 +190,7 @@
                                 <rect key="frame" x="20" y="174.66666666666666" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmar Senha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSZ-CV-fjv">
                                 <rect key="frame" x="20" y="220.66666666666663" width="129" height="20.333333333333343"/>
@@ -198,12 +198,6 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZq-oh-PiG">
-                                <rect key="frame" x="20" y="249" width="374" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkh-5X-oSG">
                                 <rect key="frame" x="147" y="295" width="120" height="40"/>
                                 <color key="backgroundColor" red="0.55294117649999996" green="0.36862745099999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -214,7 +208,16 @@
                                 <state key="normal" title="Criar conta">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="criarConta:" destination="ckC-W8-70q" eventType="touchUpInside" id="Jb2-Tb-arA"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZq-oh-PiG">
+                                <rect key="frame" x="20" y="249" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -237,6 +240,11 @@
                             <constraint firstItem="bi7-Xi-BX9" firstAttribute="leading" secondItem="gow-4f-jFL" secondAttribute="leadingMargin" id="yYO-sB-Yol"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textFieldConfirmarSenha" destination="NZq-oh-PiG" id="sKX-h2-owj"/>
+                        <outlet property="textFieldEmail" destination="BqN-4V-7Q1" id="Eag-xC-k0Z"/>
+                        <outlet property="textFieldSenha" destination="uKd-1Z-Gov" id="0Wy-OA-uwD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZzL-nG-Rzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,7 +255,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xJt-gF-Hoj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ErS-ut-NDl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ErS-ut-NDl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
