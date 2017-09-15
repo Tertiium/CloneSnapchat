@@ -265,7 +265,7 @@
         <!--Snaps-->
         <scene sceneID="JNt-iD-9q6">
             <objects>
-                <viewController id="QZm-Rp-SQm" sceneMemberID="viewController">
+                <viewController id="QZm-Rp-SQm" customClass="SnapsViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8BE-XK-UwQ"/>
                         <viewControllerLayoutGuide type="bottom" id="Tf5-zF-q02"/>
@@ -276,7 +276,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Snaps" id="GSD-Su-T1g">
-                        <barButtonItem key="leftBarButtonItem" title="Sair" id="KbM-O9-EdF"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sair" id="KbM-O9-EdF">
+                            <connections>
+                                <action selector="sair:" destination="QZm-Rp-SQm" id="cmR-PR-Jey"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rhX-uU-j7H">
                             <connections>
                                 <segue destination="G5H-AC-SRD" kind="show" id="9RT-nB-hrw"/>
@@ -288,10 +292,10 @@
             </objects>
             <point key="canvasLocation" x="3244.9275362318845" y="151.63043478260872"/>
         </scene>
-        <!--View Controller-->
+        <!--Foto View Controller-->
         <scene sceneID="wY7-7v-3cn">
             <objects>
-                <viewController id="G5H-AC-SRD" sceneMemberID="viewController">
+                <viewController id="G5H-AC-SRD" customClass="FotoViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t7C-UU-eiE"/>
                         <viewControllerLayoutGuide type="bottom" id="QxI-yZ-p7H"/>

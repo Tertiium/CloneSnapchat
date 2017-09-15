@@ -13,6 +13,8 @@
 		CE25E6D71F57EB3F0029CE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE25E6D61F57EB3F0029CE59 /* Assets.xcassets */; };
 		CE25E6DA1F57EB3F0029CE59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE25E6D81F57EB3F0029CE59 /* LaunchScreen.storyboard */; };
 		CE25E6E21F57F05A0029CE59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE25E6E11F57F05A0029CE59 /* GoogleService-Info.plist */; };
+		CE5BBF371F6C76FA00B2099B /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BBF361F6C76FA00B2099B /* SnapsViewController.swift */; };
+		CE5BBF391F6C777400B2099B /* FotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BBF381F6C777400B2099B /* FotoViewController.swift */; };
 		CED5382E1F5E049E00CBA011 /* EntrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5382D1F5E049E00CBA011 /* EntrarViewController.swift */; };
 		CED538301F5E069900CBA011 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5382F1F5E069900CBA011 /* CadastroViewController.swift */; };
 		E56D516E3A8A553CE8D6FEAA /* Pods_Snapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B9D279E548F0298EFAE01D /* Pods_Snapchat.framework */; };
@@ -29,6 +31,8 @@
 		CE25E6D91F57EB3F0029CE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE25E6DB1F57EB3F0029CE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE25E6E11F57F05A0029CE59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE5BBF361F6C76FA00B2099B /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		CE5BBF381F6C777400B2099B /* FotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotoViewController.swift; sourceTree = "<group>"; };
 		CED5382D1F5E049E00CBA011 /* EntrarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntrarViewController.swift; sourceTree = "<group>"; };
 		CED5382F1F5E069900CBA011 /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		F84D1E07468BEFE8A7A47D2E /* Pods-Snapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapchat/Pods-Snapchat.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				CE25E6D11F57EB3F0029CE59 /* ViewController.swift */,
 				CED5382F1F5E069900CBA011 /* CadastroViewController.swift */,
 				CED5382D1F5E049E00CBA011 /* EntrarViewController.swift */,
+				CE5BBF361F6C76FA00B2099B /* SnapsViewController.swift */,
+				CE5BBF381F6C777400B2099B /* FotoViewController.swift */,
 				CE25E6D31F57EB3F0029CE59 /* Main.storyboard */,
 				CE25E6D61F57EB3F0029CE59 /* Assets.xcassets */,
 				CE25E6D81F57EB3F0029CE59 /* LaunchScreen.storyboard */,
@@ -222,9 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5BBF371F6C76FA00B2099B /* SnapsViewController.swift in Sources */,
 				CE25E6D21F57EB3F0029CE59 /* ViewController.swift in Sources */,
 				CE25E6D01F57EB3F0029CE59 /* AppDelegate.swift in Sources */,
 				CED5382E1F5E049E00CBA011 /* EntrarViewController.swift in Sources */,
+				CE5BBF391F6C777400B2099B /* FotoViewController.swift in Sources */,
 				CED538301F5E069900CBA011 /* CadastroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
