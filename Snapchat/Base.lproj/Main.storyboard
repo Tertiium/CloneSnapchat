@@ -343,8 +343,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mUw-Ul-fYu">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="b6z-QS-r1D"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="b6z-QS-r1D">
+                            <connections>
+                                <action selector="selecionarFoto:" destination="G5H-AC-SRD" id="nOD-ua-jIl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageViewFoto" destination="VbH-10-SgM" id="Vaw-k9-3tO"/>
+                        <outlet property="textFieldDescricao" destination="4fE-ju-BPz" id="bS5-cg-OhA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxR-cN-OQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
