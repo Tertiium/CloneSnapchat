@@ -58,8 +58,16 @@ class CadastroViewController: UIViewController {
                         // Criar conta no Firebase
                         let autenticacao = FIRAuth.auth()
                         autenticacao?.createUser(withEmail: emailR, password: senhaR, completion: { (user, error) in
+                            
                             if error == nil {
-                                print("Sucesso ao cadastrar usuário.")
+                                
+                                if user == nil {
+                                    self.exibirMensagem(titulo: "Erro ao autenticar", mensagem: "Problema ao realizar autenticação, tente novamente.")
+                                }else {
+                                    // Redireciona usuario para tela principal
+                                    self.performSegue(withIdentifier: "cadastroLoginSegue", sender: nil)
+                                }
+                                
                             }else {
                                 
                                 let erroR = error! as NSError

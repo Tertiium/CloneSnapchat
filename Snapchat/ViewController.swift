@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -18,6 +19,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let autenticacao = FIRAuth.auth()
+        
+        
+        /*do{
+            try autenticacao?.signOut()
+        }catch{
+            print("Erro ao deslogar usuario!")
+        }*/
+        
+        // Redirecionar para tela principal caso o usuario está logado
+        autenticacao?.addStateDidChangeListener({ (autenticacao, usuario) in
+            if usuario != nil {
+                self.performSegue(withIdentifier: "loginAutomaticoSegue", sender: nil)
+            }
+        })
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

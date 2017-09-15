@@ -82,6 +82,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Snapchat" id="Tc7-bz-Uy8"/>
+                    <connections>
+                        <segue destination="QZm-Rp-SQm" kind="presentation" identifier="loginAutomaticoSegue" id="c4J-N0-BMD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,6 +136,9 @@
                                 <state key="normal" title="Entrar">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="entrar:" destination="cRz-55-map" eventType="touchUpInside" id="niG-Hd-PHr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,6 +157,11 @@
                             <constraint firstItem="7Pk-QM-PgP" firstAttribute="top" secondItem="Kc4-qj-HGG" secondAttribute="bottom" constant="16" id="zCT-Tg-d7I"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textFieldEmail" destination="Kc4-qj-HGG" id="M1D-x0-PQc"/>
+                        <outlet property="textFieldSenha" destination="5wd-fJ-S4H" id="Imb-1e-uLe"/>
+                        <segue destination="QZm-Rp-SQm" kind="presentation" identifier="loginSegue" id="cD3-Yi-hfC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMH-OJ-sAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,18 +255,46 @@
                         <outlet property="textFieldConfirmarSenha" destination="NZq-oh-PiG" id="sKX-h2-owj"/>
                         <outlet property="textFieldEmail" destination="BqN-4V-7Q1" id="Eag-xC-k0Z"/>
                         <outlet property="textFieldSenha" destination="uKd-1Z-Gov" id="0Wy-OA-uwD"/>
+                        <segue destination="QZm-Rp-SQm" kind="presentation" identifier="cadastroLoginSegue" id="hlJ-M6-BJP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZzL-nG-Rzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1400" y="539.67391304347825"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="JNt-iD-9q6">
+            <objects>
+                <viewController id="QZm-Rp-SQm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8BE-XK-UwQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tf5-zF-q02"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CAn-bN-JWx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tela principal!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dG-wl-uIQ">
+                                <rect key="frame" x="154" y="92" width="106" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXN-4g-jJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2329" y="213"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="A3d-pT-Q1T">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xJt-gF-Hoj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ErS-ut-NDl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ErS-ut-NDl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -272,4 +311,7 @@
     <resources>
         <image name="logo" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="c4J-N0-BMD"/>
+    </inferredMetricsTieBreakers>
 </document>
